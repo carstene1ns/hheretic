@@ -46,6 +46,8 @@
  *
  */
 
+// disable for GX build
+#ifndef GEKKO
 
 #include "h2stdinc.h"
 #include <sys/stat.h>
@@ -850,3 +852,6 @@ int main(int argc,char **argv)
 }
 
 #endif
+
+#endif // GEKKO
+

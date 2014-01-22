@@ -2,6 +2,9 @@
 // $Revision$
 // $Date$
 
+// disable for GX build
+#ifndef GEKKO
+
 #include "h2stdinc.h"
 #include <math.h>	/* pow() */
 #include <pthread.h>
@@ -443,4 +446,6 @@ void I_StopSong(int handle)
 void I_PlaySong(int handle, boolean looping)
 {
 }
+
+#endif // GEKKO
 

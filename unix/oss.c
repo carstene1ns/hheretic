@@ -16,6 +16,8 @@
  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
+// disable for GX build
+#ifndef GEKKO
 
 #include <errno.h>
 #include <string.h>
@@ -696,4 +698,6 @@ OutputPlugin *get_oplugin_info(void)
 {
 	return &oss_op;
 }
+
+#endif // GEKKO
 

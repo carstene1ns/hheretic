@@ -14,6 +14,12 @@
 #include "doomdef.h"
 #include "soundst.h"
 
+// filesystem stuff
+#ifdef GEKKO
+#include "SDL_main.h"
+#include "fat.h"
+#endif
+
 extern void I_StartupMouse(void);
 extern void I_ShutdownGraphics(void);
 
@@ -514,6 +520,10 @@ int main (int argc, char **argv)
 		PrintHelp (argv[0]);
 		return 0;
 	}
+
+#ifdef GEKKO
+	fatInitDefault();
+#endif
 
 	ValidateByteorder();
 	CreateBasePath();

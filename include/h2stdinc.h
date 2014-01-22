@@ -9,7 +9,11 @@
 #ifndef __H2STDINC_H
 #define __H2STDINC_H
 
-#include "config.h"
+#ifdef GEKKO
+  #include "wii_config.h"
+#else
+  #include "config.h"
+#endif
 
 #if defined(_WIN32) && !defined(WIN32_LEAN_AND_MEAN)
 #define WIN32_LEAN_AND_MEAN

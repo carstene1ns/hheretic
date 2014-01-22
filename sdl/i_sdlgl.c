@@ -4,6 +4,9 @@
 //**
 //**************************************************************************
 
+// disable for GX build
+#ifndef GEKKO
+
 #include "h2stdinc.h"
 #include <unistd.h>
 #include <sys/time.h>
@@ -454,4 +457,6 @@ void I_StartupMouse (void)
 {
 	mousepresent = 1;
 }
+
+#endif // GEKKO
 

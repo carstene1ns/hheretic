@@ -754,8 +754,12 @@ void M_ScreenShot (void)
 	{
 		p[5] = i/10 + '0';
 		p[6] = i%10 + '0';
+#ifdef GEKKO
+    // do it with stat
+#else
 		if (access(lbmname, F_OK) == -1)
 			break;	// file doesn't exist
+#endif
 	}
 	if (i == 100)
 	{

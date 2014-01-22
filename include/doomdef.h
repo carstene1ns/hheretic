@@ -13,7 +13,10 @@
 #define RANGECHECK	1
 #endif
 
+#ifndef GEKKO
+// same macro already defined
 #define __STRINGIFY(x) #x
+#endif
 #define STRINGIFY(x) __STRINGIFY(x)
 
 #define VERSION			130
